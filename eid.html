@@ -63,7 +63,7 @@
     }
     
     .flip-card-front {
-      background-color: #bbb;
+      /* background-color: #bbb; */
       color: black;
     }
     
@@ -79,6 +79,12 @@
         color: #faa918 !important;
         font-family: "Droid Arabic Kufi", serif;
     }
+
+    @media only screen and (max-width: 600px) {
+        .flip-card {
+            width: 400px ;
+        }
+    }
     </style>
 
 </head>
@@ -91,17 +97,21 @@
         <h1>كل عام وانت بخير و صحة وسلامة يا <span class="eid"></span></h1>
         <!-- <h3>Hover over the image below:</h3> -->
         
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="assets/img/eid.jpg" alt="Avatar" style="width:500px;height:500px;">
-            </div>
-            <div class="flip-card-back">
-              <h1 style="margin-top: 50%;" class="flip-color align-self-center eid"></h1> 
-              <!-- <h3>احمد</h3>  -->
-              <!-- <p>We love that guy</p> -->
-            </div>
-          </div>
+        <div class="row">
+            <!-- <div class="col-lg-6 col-md-12"> -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="assets/img/eid.jpg" alt="Avatar" style="width:100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1 style="margin-top: 50%;" class="flip-color align-self-center eid"></h1> 
+                        <!-- <h3>احمد</h3>  -->
+                        <!-- <p>We love that guy</p> -->
+                      </div>
+                    </div>
+                  </div>
+            <!-- </div> -->
         </div>
     </div>
   </section><!-- End Hero -->
