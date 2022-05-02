@@ -774,7 +774,7 @@
       window.onload = function (){
         document.querySelectorAll('.eid')[0].textContent = decodeURI(name().join(' ')) ;
         document.querySelectorAll('.eid')[1].textContent = decodeURI(name().join(' ')) ;
-        document.querySelectorAll('.eid')[0].setAttribute('href', 'https://api.whatsapp.com/send/?text=https://alm143.github.io/eid/eid.html?name=' + decodeURI(name().join('+')) );
+        document.querySelectorAll('.eid')[0].setAttribute('href', 'https://api.whatsapp.com/send/?text=https://alm143.github.io/eid/eid.html?name=' + name().join('+') );
       }
 
       function name(){
