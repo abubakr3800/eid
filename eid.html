@@ -95,7 +95,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-        <h1>كل عام وانت بخير و صحة وسلامة يا <span class="eid"></span></h1>
+        <h1>كل عام وانت بخير و صحة وسلامة يا <a href="" class="eid"></a> وتقبل الله منا ومنك الصيام والقيام</h1>
         <!-- <h3>Hover over the image below:</h3> -->
         
         <div class="row">
@@ -770,6 +770,7 @@
       window.onload = function (){
         document.querySelectorAll('.eid')[0].textContent = decodeURI(name().join(' ')) ;
         document.querySelectorAll('.eid')[1].textContent = decodeURI(name().join(' ')) ;
+        document.querySelectorAll('.eid')[0].setAttribute('href', window.location.href );
       }
 
       function name(){
