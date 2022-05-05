@@ -104,6 +104,7 @@
         animation-direction: alternate;  
 
     }
+
     </style>
 
 </head>
@@ -113,7 +114,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-        <h1>كل عام وانت بخير و صحة وسلامة يا <a href="" class="eid"></a> وتقبل الله منا ومنك الصيام والقيام</h1>
+        <h1>كل عام وانت بخير و صحة وسلامة يا <a href="" class="eid"></a> وتقبل الله منا ومنك الصيام والقيام </h1>
+        <h6><a onclick="screen()">تنزيل صورة</a></h6>
         <!-- <h3>Hover over the image below:</h3> -->
         
         <div class="row">
@@ -125,8 +127,7 @@
                       </div>
                       <div class="flip-card-back" id="back">
                         <h1 style="margin-top: 50%;" class="flip-color align-self-center eid"></h1> 
-                        <!-- <h3>احمد</h3>  -->
-                        <!-- <p>We love that guy</p> -->
+                          <div id="hidd" style="visibility: hidden;"></div>
                       </div>
                     </div>
                 </div>
@@ -778,7 +779,19 @@
   </main><!-- End #main -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="node_modules/html2canvas/dist/html2canvas.js"></script>
+  <script>
+      function  screen(){
+          html2canvas(document.querySelector("#back")).then(canvas => {
+              // document.body.appendChild(canvas);
+              var anchor = document.createElement("a");
+              anchor.href = canvas.toDataURL("image/png");
+              anchor.download = "IMAGE.PNG";
+              anchor.click();
+          });
+      }
 
+  </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -808,6 +821,7 @@
           return name;
       }
   </script>
+    
 
 </body>
 
