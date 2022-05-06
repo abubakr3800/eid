@@ -1,6 +1,6 @@
 @ECHO OFF
-echo type commit name
 git status
+echo type commit name \n\n
 set/p "cho=>"
 git add *
 git commit -m " + %cho% + "
